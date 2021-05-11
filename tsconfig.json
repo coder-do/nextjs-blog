@@ -1,5 +1,14 @@
 {
     "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/home/*": [
+                "styles/homePage/*"
+            ],
+            "@/homePage/*": [
+                "components/home-page/*"
+            ]
+        },
         "allowJs": true,
         "alwaysStrict": true,
         "esModuleInterop": true,

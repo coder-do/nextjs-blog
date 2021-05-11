@@ -1,9 +1,10 @@
+import * as React from 'react';
+import Hero from '@/homePage/hero';
 
-
-const IndexPage = () => (
-    <div>
-        <h1>Hello Next.js 👋</h1>
-    </div>
+const IndexPage: React.FC<JSX.Element> = () => (
+    <>
+        <Hero />
+    </>
 )
 
-export default IndexPage
+export default IndexPage;
