@@ -54,3 +54,7 @@ button {
     font: inherit;
     cursor: pointer;
 }
+
+img {
+    width: 100%;
+}

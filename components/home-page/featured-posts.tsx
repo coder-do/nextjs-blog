@@ -1,12 +1,13 @@
 import * as React from 'react';
-import styles from '@/home/featured-posts.module.css';
+import PostGrid from 'components/posts/posts-grid';
+import styles from '@/homeStyle/featured-posts.module.css';
+import { Allposts } from 'types/Post';
 
-const FeaturedPosts: React.FC<Element> = ({ posts }: any) => {
-    return (
-        <section className={styles.latest}>
-            <h2>Featured Posts</h2>
-        </section>
-    )
-}
+const FeaturedPosts: React.FC<Allposts> = ({ posts }): JSX.Element => (
+    <section className={styles.latest}>
+        <h2>Featured Posts</h2>
+        <PostGrid posts={posts} />
+    </section>
+)
 
 export default FeaturedPosts;

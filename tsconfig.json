@@ -2,12 +2,36 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "@/home/*": [
+            "@/homeStyle/*": [
                 "styles/homePage/*"
+            ],
+            "@/contactStyle/*": [
+                "styles/contact/*"
+            ],
+            "@/layoutStyle/*": [
+                "styles/layout/*"
+            ],
+            "@/postStyle/*": [
+                "styles/posts/*"
+            ],
+            "@/uiStyle/*": [
+                "styles/ui/*"
             ],
             "@/homePage/*": [
                 "components/home-page/*"
-            ]
+            ],
+            "@/contactPage/*": [
+                "components/contact/*"
+            ],
+            "@/layoutPage/*": [
+                "components/layout/*"
+            ],
+            "@/postPage/*": [
+                "components/posts/*"
+            ],
+            "@/uiPage/*": [
+                "components/UI/*"
+            ],
         },
         "allowJs": true,
         "alwaysStrict": true,
