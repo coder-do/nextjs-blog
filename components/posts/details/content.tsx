@@ -1,6 +1,7 @@
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
 import PostHeader from './header';
+import Image from 'next/image';
 import styles from '@/postStyle/post-content.module.css';
 import { Post } from 'types/Post';
 
@@ -16,6 +17,26 @@ const PostContent: React.FC<Post> = ({ post }): JSX.Element => {
     const imgPath = `/images/posts/${post.image}`;
 
     const customRenderers = {
+        p(paragraph: any) {
+            const { node } = paragraph;
+
+            if (node.children[0].tagName === 'img') {
+                const image = node.children[0];
+
+                return (
+                    <div className={styles.image}>
+                        <Image
+                            src={`${image.properties.src}`}
+                            alt={image.alt}
+                            width={600}
+                            height={300}
+                        />
+                    </div>
+                );
+            }
+
+            return <p>{paragraph.children}</p>;
+        },
         code(code: any) {
             const { className, children } = code;
             const language = className.split('-')[1];
