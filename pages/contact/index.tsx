@@ -1,6 +1,11 @@
 import * as React from 'react';
-import ContactPage from 'components/contact';
 
-const ContactsPage: React.FC<Element> = (): JSX.Element => <ContactPage />
+const ContactsPage: React.FC<Element> = (): JSX.Element => {
+    return (
+        <>
+            <h1>jhj</h1>
+        </>
+    )
+}
 
 export default ContactsPage;
