@@ -15,7 +15,6 @@ const PostContent: React.FC<Post> = ({ post }): JSX.Element => {
             const { className, children } = code;
             const language = className.split('-')[1];
             const temp = children.map((el: string) => el.trim());
-            console.log(temp);
             return (
                 <SyntaxHighlighter
                     style={dark}
